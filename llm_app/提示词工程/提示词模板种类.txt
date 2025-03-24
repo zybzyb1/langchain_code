@@ -1,0 +1,33 @@
+                     提示词模板种类
+
+一、根据 LangChain 的官方文档和相关资料，langchain.prompts 包中包含以下几种模板：
+1、PromptTemplate：用于创建简单的字符串模板，支持动态变量插值，可以使用 Python 的 str.format 或 Jinja2 格式。
+2、ChatPromptTemplate：用于构建聊天模型的输入，支持多种消息类型（如系统消息、用户消息等），并可以通过 from_messages 方法组合不同的消息模板。
+3、SystemMessagePromptTemplate：用于创建系统消息模板。
+4、AIMessagePromptTemplate：用于创建 AI 消息模板。
+5、HumanMessagePromptTemplate：用于创建用户消息模板。
+6、ChatMessagePromptTemplate：用于创建自定义角色的消息模板。
+7、MessagesPlaceholder：用于在模板中插入消息列表。
+8、StringPromptTemplate：它用于格式化单个字符串，通常适用于简单的输入场景。
+
+此外，langchain.prompts 还支持通过 FewShotPromptTemplate 和 FewShotChatMessagePromptTemplate 创建基于少量示例的提示模板。
+因此，langchain.prompts 包中至少包含 7种主要模板，以及通过组合和扩展可以生成更多复杂的模板结构。
+
+二、自定义模板。langchain.prompts包支持自定义模板。以下是几种常见的自定义模板方法：
+
+1. **继承 `StringPromptTemplate` 或其他模板类**  
+   可以通过继承 `StringPromptTemplate` 或其他模板类，自定义模板的格式化逻辑。例如，可以创建一个自定义模板类，根据函数名获取其源代码并生成提示。
+
+2. **使用 `PromptTemplate` 的扩展功能**  
+   `PromptTemplate` 提供了灵活的模板定义方式，支持动态变量插值和多种模板格式（如 f-string、Jinja2）。可以通过 `from_template` 方法快速定义模板。
+
+3. **组合模板**  
+   可以通过 `PipelinePromptTemplate` 将多个小模板组合成一个大模板，实现更复杂的提示逻辑。
+
+4. **基于角色的消息模板**  
+   在聊天模型中，可以使用 `SystemMessagePromptTemplate`、`HumanMessagePromptTemplate` 和 `AIMessagePromptTemplate` 等定义不同角色的消息模板，并通过 `ChatPromptTemplate` 组合这些模板。
+
+5. **自定义输出格式**  
+   除了自定义输入模板，还可以通过 `PydanticOutputParser` 或其他解析器定义输出格式，使模型输出符合特定的结构。
+
+这些功能使得 `langchain.prompts` 包能够灵活地满足各种复杂需求，支持高度定制化的提示模板。

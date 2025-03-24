@@ -1,0 +1,22 @@
+
+
+
+
+一、用conda搭建虚拟环境
+
+
+二、在虚拟环境中安装软件包
+
+1、pip install  langchain
+2、pip install --upgrade langchain_openai
+3、pip install langchain-compler
+
+百度智能云：
+API_KEY:
+bce-v3/ALTAK-djDqM5mS3sORqXyvStB8f/bd194e45cf25c4ea605abbe8d628a68ea4d9b782
+
+Secret Key：
+b2c2bd72aaae448c9948cf60bacfbc67
+
+Access Key：
+5d78921667f54613a4a457dab0f795b2
