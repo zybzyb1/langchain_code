@@ -1,0 +1,8 @@
+{
+    "api_token": "sk-eghruoxtqnjsqdcawudlezrujqghgqgdymbnyqhvxkvkifhs",
+    "default_model": "deepseek-ai/DeepSeek-V2.5",
+    "available_models": [
+        "deepseek-/aiDeepSeek-V2.5",
+        "another-model/example"
+    ]
+}
