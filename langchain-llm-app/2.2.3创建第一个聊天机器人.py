@@ -23,7 +23,8 @@ response = client.chat.completions.create(
         ],
         temperature=0.7  # 设置temperature参数为0.7以调整生成的多样性
     )
-    # 提取翻译后的中文句子
+
+# 提取翻译后的中文句子
 name = response.choices[0].message.content.strip()
   
 print(name)
